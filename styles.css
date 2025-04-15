@@ -1,0 +1,363 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;
+    padding: 20px 10px;
+    margin: 0;
+    min-width: unset; 
+}
+
+.center_page{
+    background-color: #1A1A1A;
+    border-radius: 25px;
+    padding: 20px 30px; 
+    width: auto; 
+    max-width: 1200px; 
+    min-width: 500px; 
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.row{
+    display:flex;
+    position: relative;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.content_header_box{
+    text-align: left;
+    position: absolute;
+    background-color: #2C2C2C;
+    border-radius: 25px;
+    top: 10px;
+    left: 580px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 10px 15px 15px black;
+}
+
+.code{
+    color:green;
+    font-size: 12px;
+    letter-spacing: .01em;
+}
+
+.text_content_header_box {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text_content_header_box h5{
+    color: #C8C8C8;
+    overflow: hidden;
+    border-right: .3em solid green;
+    white-space: nowrap;
+    letter-spacing: .08em;
+    width: 10ch;
+    animation:
+        typing 4.5s steps(30, end) infinite alternate,
+        blink-caret .9s step-end infinite;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    60% { width: 27ch }
+    85% { width: 27ch }
+    100% { width: 0ch }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent}
+    50% { border-color: green; }
+}
+
+.text_box{
+    color: #C8C8C8;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.negrito_text_box{
+    color: white;
+    font-weight: 900;
+}
+
+.resume_button{
+    background-color:#1A1A1A;
+    color:  #C8C8C8;
+    border: green solid 2px;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 8px 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.resume_button:hover{
+    background-color: green;
+    color: white;
+}
+
+.resume_button_text{
+    font-size: 13px;
+    transform: translate(5px, 0px);
+    display: inline-block;
+}
+
+.resume_button_icon{
+    width: 20px;
+    max-width: 100%;
+    align-items: center;
+}
+
+.contact_button{
+    background-color: #1A1A1A;
+    color: #C8C8C8;
+    border: green solid 2px;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 8px 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.contact_button:hover{
+    background-color: green;
+    color: white;
+}
+
+.contact_button_text{
+    font-size: 13px;
+    transform: translate(5px, 0px);
+    display: inline-block;
+}
+
+.contact_button_icon{
+    width: 20px;
+    max-width: 100%;
+    align-items: center;
+}
+
+.img_header{
+    width: 650px;
+    max-width: 100%;
+    height: 360px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    border-right: 5px solid green;
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+    text-align: left;
+    margin-left: -2.5%;
+    box-shadow: 10px 15px 15px black;
+}
+
+.h1_first{
+    font-weight: 20;
+}
+
+/* MENU */
+
+.menu{
+    display:flex;
+    position: relative;
+    gap: 10px;
+    flex-wrap: wrap;   
+}
+
+.menu h1{
+    color:green;
+    text-shadow: 10px 10px 10px black;
+}
+
+.text_menu_second {
+    color: #C8C8C8;
+    letter-spacing: 0.3px;
+}
+
+.menu_box{
+    color: #C8C8C8;
+    text-align: left;
+    line-height: 2;
+    background-color: #2C2C2C;
+    max-width: 60ch;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    padding-right: 300px;
+    border-radius: 25px;
+    box-shadow: 10px 15px 15px black;
+}
+
+.menu_box img{
+    position: absolute;
+    width: 350px;
+    max-width: 100%;
+    top: 110px;
+    left: 800px;
+    border-radius: 25px;
+    box-shadow: 10px 15px 15px black;
+}
+
+.menu_box_icon{
+    color: white;
+    display: flex;
+    align-items:center;
+    position: relative;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.menu_box_icon img{
+    width: 35px;
+    position:static;
+    top: auto;
+    left: auto;
+    box-shadow: 0px 0px 0px black;
+}
+
+.menu b {
+    color: white;
+}
+
+/* PROJECTS */
+
+.menu_projects {
+    display: absolute;
+    gap: 10px;
+    flex-direction: row;
+    margin-left: 60px;
+}
+
+.item_menu_projects{
+    background-color: blue;
+    border: green solid 2px;
+    border-radius: 25px;
+    width: 250px;
+    height: 150px;
+    box-shadow: 3px 8px 15px 2px black;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.image_contact{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.image_contact:hover{
+    color:#C8C8C8;
+    font-size: 18px;
+}
+
+.image_github{
+    width: 25px;
+    height: 25px;
+}   
+
+.image_github:hover{
+    transform: scale(1.2);
+}
+
+.image_text{
+    color: #C8C8C8;
+    font-size: 15px;
+}
+
+a {
+    color: #C8C8C8;
+    text-decoration: none;
+}   
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .body{
+        min-width: inset;
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
+    .center_page {
+        margin: 0; 
+        width: 71%; /* Reduz um pouco para dar espaço às margens */
+        padding: 15px;
+    }
+
+    .img_header {
+        width: 430px; /* Imagem responsiva */
+        height: auto; /* Altura proporcional */
+        margin-left: -5px; /* Remove margem negativa */
+        border-radius: 20px; /* Ajuste visual */
+        border: green solid 2px; /* Borda verde */
+        margin-left: 0;
+    }
+
+    .content_header_box {
+        position: relative; /* Muda para posicionamento relativo */
+        top: auto;
+        left: 5px;
+        width: 380px; /* Ocupa toda a largura */
+        margin-top: 20px; /* Espaçamento superior */
+    }
+
+    .menu {
+        position: static; /* Remove posicionamento absoluto */
+        margin-top: 30px; /* Espaçamento consistente */
+    }
+
+    .menu_box {
+        width: 390px; /* Ocupa toda a largura */
+        margin-left: 0; /* Remove margem negativa */
+        padding: 15px; /* Padding reduzido */
+        scale: 1; /* Remove redução de escala */
+    }
+
+    .menu_box_nicolas{
+        display: none;
+    }
+
+    .menu_projects{
+        flex-direction: column;  /* Alinha verticalmente */
+        gap: 20px; /* Espaçamento entre itens */
+    }
+
+    .item_menu_projects{
+        width: 310px;
+        margin-left: -5px;
+    }
+
+    .footer{
+        margin-left: -70px;
+    }
+
+}
