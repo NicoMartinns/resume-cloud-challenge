@@ -14,7 +14,7 @@ body {
     padding: 20px 30px; 
     width: auto; 
     max-width: 1200px; 
-    min-width: 500px; 
+    min-width: unset; 
     margin: 0 auto; /* Centraliza horizontalmente */
 }
 
@@ -303,18 +303,18 @@ html, body {
 
     .body{
         min-width: inset;
-        padding: 10px;
+        padding: 0px;
         overflow-x: hidden;
     }
 
     .center_page {
         margin: 0; 
-        width: 71%; /* Reduz um pouco para dar espaço às margens */
+        width: inset; /* Reduz um pouco para dar espaço às margens */
         padding: 15px;
     }
 
     .img_header {
-        width: 430px; /* Imagem responsiva */
+        width: 420px; /* Imagem responsiva */
         height: auto; /* Altura proporcional */
         margin-left: -5px; /* Remove margem negativa */
         border-radius: 20px; /* Ajuste visual */
@@ -326,7 +326,7 @@ html, body {
         position: relative; /* Muda para posicionamento relativo */
         top: auto;
         left: 5px;
-        width: 380px; /* Ocupa toda a largura */
+        width: inset; /* Ocupa toda a largura */
         margin-top: 20px; /* Espaçamento superior */
     }
 
@@ -336,10 +336,18 @@ html, body {
     }
 
     .menu_box {
-        width: 390px; /* Ocupa toda a largura */
+        width: unset; /* Ocupa toda a largura */
         margin-left: 0; /* Remove margem negativa */
         padding: 15px; /* Padding reduzido */
         scale: 1; /* Remove redução de escala */
+    }
+
+    .menu_box_icon{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap; /* Permite quebrar linha se não couber */
+        font-size: 16px; /* Tamanho base, vamos reduzir no mobile */
     }
 
     .menu_box_nicolas{
@@ -347,17 +355,18 @@ html, body {
     }
 
     .menu_projects{
+        align-items: center;
         flex-direction: column;  /* Alinha verticalmente */
         gap: 20px; /* Espaçamento entre itens */
     }
 
     .item_menu_projects{
-        width: 310px;
+        width: inset;
         margin-left: -5px;
     }
 
-    .footer{
-        margin-left: -70px;
+    .contact_footer{
+        align-items: center;
     }
 
 }
