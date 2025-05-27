@@ -9,6 +9,9 @@ permissions:
 jobs:
     terraform-apply:
         runs-on: ubuntu-latest
+        defaults:
+          run:
+            working-directory: terraform
         steps:
         - name: Checkout repository
           uses: actions/checkout@v4
@@ -16,7 +19,7 @@ jobs:
         - name: Credenciais AWS
           uses: aws-actions/configure-aws-credentials@v2
           with:
-            role-to-assume:  arn:aws:iam::601920909369:role/resume-cloud-challenge-actions
+            role-to-assume: arn:aws:iam::601920909369:role/resume-cloud-challenge-actions
             aws-region: us-east-1
         
         - name: Set up Terraform
@@ -36,7 +39,7 @@ jobs:
         needs: terraform-apply
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
             
             - name: Credencias AWS
               uses: aws-actions/configure-aws-credentials@v2

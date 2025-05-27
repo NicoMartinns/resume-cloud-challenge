@@ -28,13 +28,14 @@ resource "aws_s3_bucket_public_access_block" "s3_static_website_public_access_bl
   restrict_public_buckets = false
 }
 
+# Retiramos esse resource para evitar o upload de arquivos estáticos para o S3, pois o upload será feito via GitHub Actions
 # Upload the static website files to the S3 bucket
-resource "aws_s3_object" "s3_static_website_upload_object" {
-  bucket   = var.bucket_name
-  for_each = fileset("${path.module}/../../../site", "**")
-  key      = each.value
-  source   = "${path.module}/../../../site/${each.value}"
-}
+#resource "aws_s3_object" "s3_static_website_upload_object" {
+#  bucket   = var.bucket_name
+#  for_each = fileset("${path.module}/../../../site", "**")
+#  key      = each.value
+#  source   = "${path.module}/../../../site/${each.value}"
+#}
 
 # Set the bucket policy to allow public access to the static website
 resource "aws_s3_bucket_policy" "s3_static_website_policy" {
