@@ -8,8 +8,8 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v2
 
-        - name: Credencias AWS
-          uses: aws-actions/configure-aws-credentials@v2
+        - name: Credenciais AWS
+          uses: aws-actions/configure-aws-credentials@v4
           with:
             role-to-assume: arn:aws:iam::601920909369:role/resume-cloud-challenge-actions
             aws-region: us-east-1
